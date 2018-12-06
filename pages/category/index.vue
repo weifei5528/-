@@ -41,7 +41,9 @@
 				this.scrollTop = -this.scrollHeight * index;
 			},
 			getDetail(item,index) {
-				console.log(item);
+				uni.navigateTo({
+					url:"../audio/list?id="+item.id,
+				});
 			},
 			getCategory() {
 				

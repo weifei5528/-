@@ -8,8 +8,11 @@
 	export default {
 		data() {
 			return {
-				
+				id:0,
+				info:{}
 			};
+		},onLoad(e) {
+			this.id = e.id
 		}
 	}
 </script>
