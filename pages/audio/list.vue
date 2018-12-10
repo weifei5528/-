@@ -1,5 +1,13 @@
 <template>
 	<view>
+		<view class="box play">
+			<view >
+				<image ></image>
+			</view>
+			<view>
+				
+			</view>
+		</view>
 		<view class="box">
 			<view class="box_item box_top_color">名称</view>
 			<view class="box_item box_top_color">大小</view>
@@ -50,6 +58,11 @@
 </script>
 
 <style>
+	.play{
+		line-height: 50px;
+		display: flex;
+		
+	}
 	.box{
 		display: flex;
 		flex-direction: row;
