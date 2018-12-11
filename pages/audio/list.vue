@@ -1,25 +1,29 @@
 <template>
 	<view>
-		<view class="box play">
-			<view >
-				<image ></image>
-			</view>
+		<!--播放音乐-->
+		<view class="play_box" >
+			<view class="play_back"></view>
+			
+			
 			<view>
-				
-			</view>
-		</view>
-		<view class="box">
-			<view class="box_item box_top_color">名称</view>
-			<view class="box_item box_top_color">大小</view>
-			<view class="box_item box_top_color">点击量</view>
-			<view class="box_item box_top_color">操作</view>
-		</view>
-		<view v-for="(item ,index) in audioList" :key="index"  class="box"> 
-			<view class="box_item">{{item.name}}</view>
-			<view class="box_item">{{item.size}}</view>
-			<view class="box_item">{{item.click}}</view>
-			<view class="box_item"><img src ="../../static/play.png"/></view>
+			</view>	
+			
+			
 		</view>	
+		<view>
+			<view class="box">
+				<view class="box_item box_top_color">名称</view>
+				<view class="box_item box_top_color">大小</view>
+				<view class="box_item box_top_color">点击量</view>
+				<view class="box_item box_top_color">操作</view>
+			</view>
+			<view v-for="(item ,index) in audioList" :key="index"  class="box"> 
+				<view class="box_item">{{item.name}}</view>
+				<view class="box_item">{{item.size}}</view>
+				<view class="box_item">{{item.click}}</view>
+				<view class="box_item"><img src ="../../static/play.png"/></view>
+			</view>	
+		</view>
 	</view>
 </template>
 
@@ -58,11 +62,6 @@
 </script>
 
 <style>
-	.play{
-		line-height: 50px;
-		display: flex;
-		
-	}
 	.box{
 		display: flex;
 		flex-direction: row;
@@ -86,6 +85,34 @@
 	}
 	.box_top_color{
 		background-color: #E0E0E0;
+	}
+	.play_box{
+		height: 100px;
+		width: 350px;
+		padding: 25px;
+		overflow: hidden;
+		position: relative;
+	}
+	.play_back{
+		background-image: url('/static/c.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: blur(30px);
+		border-radius: 10px;
+		position: relative;
+		background-size: 100%;
+		width: 100%;
+		height: 100%;
+	}
+	.play_disc{
+		float: left;
+		width: 100px;
+		height: 100px;
+		position: relative;
+		background-image: url('/static/cd.png');
+		background-size: 100%;
+		top: 0px;
+		
 	}
 
 </style>
