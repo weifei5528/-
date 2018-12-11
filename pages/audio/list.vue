@@ -3,8 +3,31 @@
 		<!--播放音乐-->
 		<view class="play_box" >
 			<view class="play_back"></view>
-			
-			
+			<view style="top:25px;position: absolute; left:25px;">
+				<view class="play_disc">
+					<img class="play_img" src="/static/c.jpg">
+					<img class="play_point" src="/static/cd_tou.png"/>
+				</view>
+				
+			</view>	
+			<view class="play_controls">
+				<view class="music_info">
+					<view class="music_title">测试播放的名称</view>
+					<view class="music_singer">1111</view>
+				</view>
+				<view class="play_control">
+					
+					<view class="play_control_content" >
+						<view class="play_control_btn ">
+							<img class="play_btn_img" src="/static/before.png" />
+							<img class="play_btn_img" src="/static/play.png" />
+							<img class="play_btn_img" src="/static/next.png" />
+							<img class="play_btn_img" src="/static/rand.png" />
+							<img class="play_btn_img play_btn_voice" src ="/static/voice.png" />
+						</view>
+					</view>	
+				</view>
+			</view>	
 			<view>
 			</view>	
 			
@@ -92,6 +115,7 @@
 		padding: 25px;
 		overflow: hidden;
 		position: relative;
+		margin: auto;
 	}
 	.play_back{
 		background-image: url('/static/c.jpg');
@@ -114,5 +138,81 @@
 		top: 0px;
 		
 	}
-
+	.play_img{
+		width: 60px;
+		height: 60px;
+		margin: 20px 20px;
+		border-radius: 50%;
+		position: relative;
+	}
+	.play_point{
+		width: 25px;
+		position: absolute;
+		right: -20px;
+		top: 0px;
+		transform: rotate(-10deg);
+	}
+	.play_controls{
+		
+		width: 200px;
+		height: 100px;
+		position: absolute;
+		margin: 25px 25px 25px ;
+		top: 0px;
+		right: 25px;
+		
+	}
+	.music_info{
+		width: 100%;
+		height: 30px;
+		margin-bottom: 10px;
+		
+		margin-left: 10px;
+	}
+	.music_info{
+		
+	}
+	.music_title, .music_singer{
+		color: #fff;
+	}
+	.music_title{
+		font-size: 14px;
+	}
+	.music_singer{
+		height: 20px;
+		font-size: 12px;
+		
+	}
+	.play_control{
+		width: 100%;
+	}
+	.play_control_content{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.play_control_btn{
+		float: left;
+		margin: 0 5px;
+		
+	}
+	.play_btn_img{
+		width: 16px;
+		height: 16px;
+		margin-left: 2px;
+	}
+	.play_btn_voice{
+		margin-left: 50px;
+		
+	}
+	.play_bar{
+		
+	}
+	.progress{
+		background: rgb(0,0,0,0.3);
+		height: 5px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+		overflow: hidden;
+		border-radius: 2px;
+		cursor: pointer;
+	}
 </style>
